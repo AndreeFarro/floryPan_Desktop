@@ -70,13 +70,5 @@ public class P_Pedido{
         cliente.setPedidos(logicP.buscar(cliente));
         vista.setPedidos(cliente);       
     }
-    
-    public void listarItems(){
-        Pedido pedido = logicP.buscar(vista.getIdPedido());
-        if (pedido!=null) {
-        System.out.println(pedido.getId()+" "+pedido.getDireccion());
-            System.out.println("->"+pedido.getItems().size());
-        vista.setItems(pedido);
-        }
-    }
+
 }
