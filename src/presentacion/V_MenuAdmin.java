@@ -51,7 +51,7 @@ public class V_MenuAdmin extends javax.swing.JFrame implements IV_MenuAdmin{
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        aTitulo.setFont(new java.awt.Font("Calibri", 1, 22)); // NOI18N
+        aTitulo.setFont(new java.awt.Font("Calibri", 1, 32)); // NOI18N
         aTitulo.setForeground(new java.awt.Color(102, 0, 255));
         aTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         aTitulo.setText("Administrador");
@@ -287,7 +287,7 @@ public class V_MenuAdmin extends javax.swing.JFrame implements IV_MenuAdmin{
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -338,7 +338,7 @@ public class V_MenuAdmin extends javax.swing.JFrame implements IV_MenuAdmin{
                         .addComponent(bpedido, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(bcerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(25, 34, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -394,7 +394,7 @@ public class V_MenuAdmin extends javax.swing.JFrame implements IV_MenuAdmin{
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(bupdate, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(bdelete, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
