@@ -57,8 +57,8 @@ public class MetodoPagoDao extends Dao<MetodoPago> {
     }
 
     @Override
-    public List<MetodoPago> listado() {
-        List<MetodoPago> listaMetodo = new ArrayList();
+    public ArrayList<MetodoPago> listado() {
+        ArrayList<MetodoPago> listaMetodo = new ArrayList();
         try {
             String sql = "select * from metodopago";
             PreparedStatement statement = this.connect.prepareStatement(sql);

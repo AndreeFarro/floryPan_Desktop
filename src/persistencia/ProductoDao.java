@@ -4,6 +4,7 @@ import dominio.Producto;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductoDao extends Dao<Producto>{
@@ -73,7 +74,7 @@ public class ProductoDao extends Dao<Producto>{
     }
 
     @Override
-    public List<Producto> listado() {
+    public ArrayList<Producto> listado() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

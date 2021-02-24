@@ -47,11 +47,11 @@
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="bVaciarCarrito" min="-2" pref="121" max="-2" attributes="0"/>
+                          <Component id="bAprobar" min="-2" pref="121" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="bVaciarCarrito1" min="-2" pref="121" max="-2" attributes="0"/>
+                          <Component id="bPendientes" min="-2" pref="121" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="bVaciarCarrito2" min="-2" pref="121" max="-2" attributes="0"/>
+                          <Component id="bAprobados" min="-2" pref="121" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
@@ -64,7 +64,7 @@
                               <Group type="102" attributes="0">
                                   <Component id="aTitulo" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="168" max="32767" attributes="0"/>
-                                  <Component id="bperfil" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <Component id="binicio" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="bpedido" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -84,16 +84,16 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="aTitulo" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="bpedido" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="bperfil" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="binicio" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                       <Component id="bcerrar" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="bVaciarCarrito" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="bVaciarCarrito1" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="bVaciarCarrito2" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="bAprobar" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="bPendientes" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="bAprobados" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jScrollPane2" min="-2" pref="351" max="-2" attributes="0"/>
@@ -106,7 +106,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="bperfil">
+        <Component class="javax.swing.JButton" name="binicio">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="0" red="66" type="rgb"/>
@@ -117,7 +117,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Perfil"/>
+            <Property name="text" type="java.lang.String" value="Inicio"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -127,6 +127,9 @@
             <Property name="defaultCapable" type="boolean" value="false"/>
             <Property name="focusPainted" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="binicioActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="bcerrar">
           <Properties>
@@ -194,7 +197,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="listaProductos">
+            <Component class="javax.swing.JTable" name="listaPedidos">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -226,10 +229,13 @@
                 <Property name="showHorizontalLines" type="boolean" value="false"/>
                 <Property name="showVerticalLines" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="listaPedidosMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="bVaciarCarrito">
+        <Component class="javax.swing.JButton" name="bAprobar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="cc" red="0" type="rgb"/>
@@ -251,10 +257,10 @@
             <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVaciarCarritoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bAprobarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="bVaciarCarrito1">
+        <Component class="javax.swing.JButton" name="bPendientes">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="cc" red="0" type="rgb"/>
@@ -265,7 +271,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Vaciar Carrito"/>
+            <Property name="text" type="java.lang.String" value="Pedidos Pendientes"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -276,10 +282,10 @@
             <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVaciarCarrito1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bPendientesActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="bVaciarCarrito2">
+        <Component class="javax.swing.JButton" name="bAprobados">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="cc" red="0" type="rgb"/>
@@ -290,7 +296,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Vaciar Carrito"/>
+            <Property name="text" type="java.lang.String" value="Pedidos Aprobados"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -301,7 +307,7 @@
             <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVaciarCarrito2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bAprobadosActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane3">
@@ -311,7 +317,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="listaProductos1">
+            <Component class="javax.swing.JTable" name="listaItems">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>

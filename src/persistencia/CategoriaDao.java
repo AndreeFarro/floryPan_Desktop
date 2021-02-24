@@ -61,8 +61,8 @@ public class CategoriaDao extends Dao<Categoria>{
     }
 
     @Override
-    public List<Categoria> listado() {
-        List<Categoria> listaCategoria = new ArrayList();
+    public ArrayList<Categoria> listado() {
+        ArrayList<Categoria> listaCategoria = new ArrayList();
         try {
             String sql = "select * from categoria";
             PreparedStatement statement = this.connect.prepareStatement(sql);

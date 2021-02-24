@@ -107,8 +107,8 @@ public class ClienteDao extends Dao<Cliente> implements ICliente{
     }
 
     @Override
-    public List<Cliente> listado() {
-        List<Cliente> listaCliente = new ArrayList<>();
+    public ArrayList<Cliente> listado() {
+        ArrayList<Cliente> listaCliente = new ArrayList<>();
         try {
             String sql = "select * from cliente";
             PreparedStatement statement = this.connect.prepareStatement(sql);

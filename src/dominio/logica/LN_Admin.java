@@ -1,6 +1,7 @@
 package dominio.logica;
 
 import dominio.Personal;
+import java.util.ArrayList;
 import java.util.List;
 import persistencia.DaoFactory;
 import persistencia.DaoFactoryJDBC;
@@ -34,7 +35,7 @@ public class LN_Admin extends LN<Personal>{
     }
 
     @Override
-    public List<Personal> listado() {
+    public ArrayList<Personal> listado() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

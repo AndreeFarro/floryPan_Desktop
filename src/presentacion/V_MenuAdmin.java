@@ -201,6 +201,11 @@ public class V_MenuAdmin extends javax.swing.JFrame implements IV_MenuAdmin{
         bpedido.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bpedido.setDefaultCapable(false);
         bpedido.setFocusPainted(false);
+        bpedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bpedidoActionPerformed(evt);
+            }
+        });
 
         bupdate.setBackground(new java.awt.Color(102, 0, 255));
         bupdate.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
@@ -262,7 +267,7 @@ public class V_MenuAdmin extends javax.swing.JFrame implements IV_MenuAdmin{
         bperfil.setBackground(new java.awt.Color(102, 0, 255));
         bperfil.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
         bperfil.setForeground(new java.awt.Color(255, 255, 255));
-        bperfil.setText("Perfil");
+        bperfil.setText("Inicio");
         bperfil.setBorder(null);
         bperfil.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bperfil.setDefaultCapable(false);
@@ -471,6 +476,10 @@ public class V_MenuAdmin extends javax.swing.JFrame implements IV_MenuAdmin{
     private void bcerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcerrarActionPerformed
         p.cerrar();
     }//GEN-LAST:event_bcerrarActionPerformed
+
+    private void bpedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bpedidoActionPerformed
+        p.pedidos();
+    }//GEN-LAST:event_bpedidoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -25,7 +25,7 @@ public class P_Login implements ActionListener{
         vista.close();       
     }   
     
-    public void ingresar(){        
+    public void ingresar(){
         Cliente cliente = new Cliente();
         cliente.setCorreo(vista.getCorreo());
         cliente.setContraseña(vista.getClave());        
@@ -42,7 +42,7 @@ public class P_Login implements ActionListener{
             P_MenuAdmin pres = new P_MenuAdmin(vistaP, personal);
             vistaP.setPresentador(pres);
             vistaP.iniciar();
-            vista.close();                      
+            vista.close();
         }else if(cliente!= null){
             Carrito carrito = logicaC.buscar(Integer.valueOf(cliente.getId()));
             cliente.setCarrito(carrito);

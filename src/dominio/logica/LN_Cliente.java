@@ -1,12 +1,9 @@
 package dominio.logica;
 
 import dominio.Cliente;
-import java.util.List;
-import persistencia.DaoFactory;
-import persistencia.DaoFactoryJDBC;
+import java.util.ArrayList;
 
 public class LN_Cliente extends LN<Cliente>{
-    DaoFactory db = new DaoFactoryJDBC();
     
     public void crearCliente(Cliente obj){
         db.getClienteDao().crear(obj);
@@ -38,7 +35,7 @@ public class LN_Cliente extends LN<Cliente>{
     }
 
     @Override
-    public List<Cliente> listado() {
+    public ArrayList<Cliente> listado() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
         

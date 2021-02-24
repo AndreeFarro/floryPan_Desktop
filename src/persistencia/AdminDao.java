@@ -6,6 +6,7 @@ import dominio.Tipo;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdminDao extends Dao<Personal> implements IAdmin{
@@ -36,7 +37,7 @@ public class AdminDao extends Dao<Personal> implements IAdmin{
     }
 
     @Override
-    public List<Personal> listado() {
+    public ArrayList<Personal> listado() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

@@ -12,9 +12,7 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class PedidoDao extends Dao<Pedido>{
 
@@ -38,9 +36,9 @@ public class PedidoDao extends Dao<Pedido>{
         }
     }
     
-    public List<ItemsPedido> buscarItems(Pedido obj) {
+    public ArrayList<ItemsPedido> buscarItems(Pedido obj) {
         
-        List<ItemsPedido> listItem = new ArrayList();
+        ArrayList<ItemsPedido> listItem = new ArrayList();
         try {
             String sql = "select * from item where idPedido="+obj.getId();
             PreparedStatement statement = this.connect.prepareStatement(sql);
@@ -88,9 +86,21 @@ public class PedidoDao extends Dao<Pedido>{
 
     @Override
     public void actualizar(Pedido obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
+    public void AprobarPedido(Pedido obj){
+        try{
+            String sql = "update pedido set estado=? where id = ?";
+            PreparedStatement statement = this.connect.prepareStatement(sql);
+            statement.setString(1,obj.getEstado());             
+            statement.setInt(2,Integer.valueOf(obj.getId()));
+            statement.execute();    
+        }catch (NumberFormatException | SQLException e){
+            
+        } 
+    }
+    
     public Pedido buscar(int id){
         Pedido c =null;
         try {
@@ -174,8 +184,24 @@ public class PedidoDao extends Dao<Pedido>{
     }
 
     @Override
-    public List<Pedido> listado() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ArrayList<Pedido> listado() {
+        ArrayList<Pedido> listaPedidos = new ArrayList<>();
+        try {
+            String sql = "select * from pedido";
+            PreparedStatement statement = this.connect.prepareStatement(sql);
+            ResultSet rs = statement.executeQuery();
+            
+            while(rs.next()){
+                Pedido c = new Pedido();
+                c.setId(rs.getString(1));
+                c.setDireccion(rs.getString(2));
+                c.setFecha(rs.getDate(3));
+                c.setEstado(rs.getString(4));            
+                listaPedidos.add(c);
+            }   
+        }catch (SQLException e){
+        } 
+        return listaPedidos;
     }
     
     public MetodoPago buscarMetodoPago(int id) {

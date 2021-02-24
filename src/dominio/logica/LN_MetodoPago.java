@@ -1,6 +1,7 @@
 package dominio.logica;
 
 import dominio.MetodoPago;
+import java.util.ArrayList;
 import java.util.List;
 
 public class LN_MetodoPago extends LN<MetodoPago>{
@@ -31,7 +32,7 @@ public class LN_MetodoPago extends LN<MetodoPago>{
     }
 
     @Override
-    public List<MetodoPago> listado() {
+    public ArrayList<MetodoPago> listado() {
         return super.db.getMetodoPagoDao().listado();
     }
     

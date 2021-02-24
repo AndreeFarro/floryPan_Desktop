@@ -1,6 +1,7 @@
 package dominio.logica;
 
 import dominio.Producto;
+import java.util.ArrayList;
 import java.util.List;
 
 public class LN_Producto extends LN<Producto> {
@@ -31,7 +32,7 @@ public class LN_Producto extends LN<Producto> {
     }
 
     @Override
-    public List<Producto> listado() {
+    public ArrayList<Producto> listado() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

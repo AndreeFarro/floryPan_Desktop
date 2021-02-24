@@ -3,17 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/presentacion/P_Carrito.java</file>
-            <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/persistencia/ItemDao.java</file>
-            <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/persistencia/PedidoDao.java</file>
-            <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/dominio/logica/LN_Pedido.java</file>
-            <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/persistencia/CarritoDao.java</file>
-            <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/presentacion/IV_Pedido.java</file>
+            <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/presentacion/V_AdminPedidos.java</file>
+            <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/presentacion/IV_AdminPedidos.java</file>
+            <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/presentacion/P_AdminPedidos.java</file>
+            <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/presentacion/IV_Carrito.java</file>
             <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/presentacion/V_Carrito.java</file>
-            <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/presentacion/V_Pedidos.java</file>
-            <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/presentacion/P_Pedido.java</file>
-            <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/presentacion/P_MenuCliente.java</file>
-            <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/persistencia/ClienteDao.java</file>
+            <file>file:/C:/Users/andre/OneDrive/Documentos/NetBeansProjects/FloryPan/src/presentacion/P_MenuAdmin.java</file>
         </group>
     </open-files>
 </project-private>

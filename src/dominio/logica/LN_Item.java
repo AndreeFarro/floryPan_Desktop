@@ -1,6 +1,7 @@
 package dominio.logica;
 
 import dominio.ItemsPedido;
+import java.util.ArrayList;
 import java.util.List;
 
 public class LN_Item extends LN<ItemsPedido>{
@@ -39,7 +40,7 @@ public class LN_Item extends LN<ItemsPedido>{
     }
 
     @Override
-    public List<ItemsPedido> listado() {
+    public ArrayList<ItemsPedido> listado() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

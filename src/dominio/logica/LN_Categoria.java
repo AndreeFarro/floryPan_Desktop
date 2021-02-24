@@ -1,6 +1,7 @@
 package dominio.logica;
 
 import dominio.Categoria;
+import java.util.ArrayList;
 import java.util.List;
 
 public class LN_Categoria extends LN<Categoria> {
@@ -39,7 +40,7 @@ public class LN_Categoria extends LN<Categoria> {
     }
 
     @Override
-    public List<Categoria> listado() {
+    public ArrayList<Categoria> listado() {
         return super.db.getCategoriaDao().listado();
     }
     

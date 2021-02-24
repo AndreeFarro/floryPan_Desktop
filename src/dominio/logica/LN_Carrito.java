@@ -1,6 +1,7 @@
 package dominio.logica;
 
 import dominio.Carrito;
+import java.util.ArrayList;
 import java.util.List;
 
 public class LN_Carrito extends LN<Carrito>{
@@ -40,7 +41,7 @@ public class LN_Carrito extends LN<Carrito>{
     }
 
     @Override
-    public List<Carrito> listado() {
+    public ArrayList<Carrito> listado() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

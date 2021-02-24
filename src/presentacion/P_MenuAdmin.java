@@ -99,4 +99,12 @@ public class P_MenuAdmin {
         vistaL.iniciar();
         vista.close();
     }
+    
+    public void pedidos(){
+        IV_AdminPedidos vistaP = new V_AdminPedidos();
+        P_AdminPedidos presentador = new P_AdminPedidos(vistaP, personal);
+        vistaP.setPresentador(presentador);
+        vistaP.iniciar();
+        vista.close();
+    }
 }
