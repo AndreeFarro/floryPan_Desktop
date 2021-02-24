@@ -11,6 +11,7 @@ public interface IV_MenuCliente {
     public void setProductos(Categoria lista);
     public void setCategorias(List<String> s);
     public int getCantidadProducto();
+    public String getStock();
     
     public void setNombre(String nombre);
     public void setCorreo(String correo);

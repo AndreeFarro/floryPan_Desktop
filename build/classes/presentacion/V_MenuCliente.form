@@ -363,10 +363,10 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="aTitulo24" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtdni" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="aTitulo19" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtapellido" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="txtdni" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>

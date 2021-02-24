@@ -323,10 +323,10 @@ public class V_MenuCliente extends javax.swing.JFrame implements IV_MenuCliente{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(aTitulo24)
+                    .addComponent(txtdni, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(aTitulo19)
-                        .addComponent(txtapellido, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtdni, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtapellido, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(aTitulo21)
@@ -790,4 +790,7 @@ public class V_MenuCliente extends javax.swing.JFrame implements IV_MenuCliente{
         String id = String.valueOf(this.listaProductos.getValueAt(i, 0));
         return Integer.valueOf(id);
     }
+
+    @Override
+    public String getStock() {return txtstock.getText();}
 }

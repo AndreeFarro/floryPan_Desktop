@@ -12,6 +12,7 @@ import dominio.logica.LN_Producto;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+import javax.swing.JOptionPane;
 
 public class P_MenuCliente {
     private IV_MenuCliente vista;
@@ -122,11 +123,19 @@ public class P_MenuCliente {
     }
     public void agregarCarrito(){
         ItemsPedido item = new ItemsPedido();
-        item.setCantidad(vista.getCantidadProducto());
-        item.setProducto(logicP.buscar(vista.getIdProducto()));
-        logicI.crear(item);     
+        Producto producto = logicP.buscar(vista.getIdProducto());
         
-        cliente.getCarrito().agregarItem(logicI.Agregado());
-        logicCarrito.actualizar(cliente.getCarrito());
+        if (producto.getStock()>=vista.getCantidadProducto()) {
+            item.setCantidad(vista.getCantidadProducto());
+            item.setProducto(logicP.buscar(vista.getIdProducto()));
+            logicI.crear(item);     
+
+            cliente.getCarrito().agregarItem(logicI.Agregado());
+            logicCarrito.actualizar(cliente.getCarrito());
+        }else{
+            JOptionPane.showMessageDialog(null, "monto superior al Stock", "ERROR", JOptionPane.WARNING_MESSAGE);
+        }
+
+        
     }
 }

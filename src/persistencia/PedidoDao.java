@@ -58,7 +58,6 @@ public class PedidoDao extends Dao<Pedido>{
     }
     
     public Producto buscarProducto(int id){
-        System.out.println("buscando productos...");
         Producto p =null;
         try {
             String sql = "select * from producto where id="+id;
@@ -68,7 +67,6 @@ public class PedidoDao extends Dao<Pedido>{
             while(rs.next()){
                 p = new Producto();                
                 p.setId(rs.getString(1));
-                System.out.println(rs.getDouble(3));
                 p.setNombre(rs.getString(2));  
                 p.setPrecio(rs.getDouble(3));  
                 p.setStock(rs.getInt(4));  
@@ -144,7 +142,6 @@ public class PedidoDao extends Dao<Pedido>{
                     ItemsPedido itm = new ItemsPedido();           
                     itm.setId(rs1.getString(1));
                     itm.setProducto(buscarProducto(rs1.getInt(3)));
-                    System.out.println("item.... "+itm.getProducto().getNombre());
                     itm.setCantidad(rs1.getInt(4));
                     c.agregarItem(itm);
                 }
