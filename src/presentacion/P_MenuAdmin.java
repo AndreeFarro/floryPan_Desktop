@@ -36,7 +36,7 @@ public class P_MenuAdmin {
         llenarCategorias();
     }
     
-    public String encontrar(){
+    public String encontrarIdCategoria(){
         int i = 0;
         String id= "";
         String[] datos = new String[2];
@@ -57,14 +57,14 @@ public class P_MenuAdmin {
         producto.setDescripcion(vista.getDescripcion()); 
         
         Categoria c = new Categoria();
-        c.setId(encontrar());
+        c.setId(encontrarIdCategoria());
         c.agregarProducto(producto);
         
         logicC.CrearProducto(c);        
     }
     public void listarProductos(){
         Categoria c = new Categoria();
-        c.setId(encontrar());
+        c.setId(encontrarIdCategoria());
         c = logicC.listaProductos(c);
         if (c!=null) {
             vista.setProductos(c);
@@ -88,11 +88,11 @@ public class P_MenuAdmin {
     
     public void eliminarCategoria(){
         Categoria c = new Categoria();
-        c.setId(encontrar());
+        c.setId(encontrarIdCategoria());
         logicC.eliminar(c);
     }
     
-    public void cerrar(){
+    public void cerrarVista(){
         IV_Login vistaL = new V_Login();
         P_Login presentador = new P_Login(vistaL);
         vistaL.setPresentador(presentador);
@@ -100,7 +100,7 @@ public class P_MenuAdmin {
         vista.close();
     }
     
-    public void pedidos(){
+    public void cambiarVistapedidos(){
         IV_AdminPedidos vistaP = new V_AdminPedidos();
         P_AdminPedidos presentador = new P_AdminPedidos(vistaP, personal);
         vistaP.setPresentador(presentador);

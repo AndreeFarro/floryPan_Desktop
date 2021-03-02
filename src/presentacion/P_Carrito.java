@@ -24,21 +24,21 @@ public class P_Carrito {
         this.vista = vista;
         this.cliente = cliente;
     }    
-    public void inicio(){
+    public void cambiarVistainicio(){
         IV_MenuCliente vistaC = new V_MenuCliente();
         P_MenuCliente pres = new P_MenuCliente(vistaC, cliente);
         vistaC.setPresentador(pres);
         vistaC.iniciar();
         vista.close();  
     }
-    public void Pedidos(){
+    public void cambiarVistaPedidos(){
         IV_Pedido vistaP = new V_Pedidos();
         P_Pedido pres = new P_Pedido(vistaP, cliente);
         vistaP.setPresentador(pres);
         vistaP.iniciar();
         vista.close();  
     }   
-    public void salir(){
+    public void CerrarVentana(){
         IV_Login vistaL = new V_Login();
         P_Login presentador = new P_Login(vistaL);
         vistaL.setPresentador(presentador);
@@ -48,7 +48,7 @@ public class P_Carrito {
     
     public void ListarItems(){
         vista.setItems(cliente.getCarrito());
-        datosPedido();
+        llenardatosPedido();
     }
     
     public void eliminarItem(){        
@@ -86,11 +86,12 @@ public class P_Carrito {
         ListarItems();
     }
     
-    public void datosPedido(){
+    public void llenardatosPedido(){
         vista.setDireccion(cliente.getDireccion());   
         int numeroProductos= 0;
         int numeroUnidades = 0;
         Double precioTotal = 0.0;
+        
         for(ItemsPedido item: cliente.getCarrito().getListaItems()){
             numeroProductos += 1;
             numeroUnidades += item.getCantidad();
@@ -118,8 +119,8 @@ public class P_Carrito {
     public void relizarPedido(){
         if (cliente.getCarrito().getListaItems().size()>0) {          
             Date myDate = new Date();
-
             Pedido pedido = new Pedido();
+            
             pedido.setDireccion(vista.getDireccion());
             pedido.setFecha(myDate);
             pedido.setMetodoPago(logicMetodo.buscar(Integer.valueOf(encontrarPago())));                

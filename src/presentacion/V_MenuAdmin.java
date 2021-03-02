@@ -1,7 +1,6 @@
 package presentacion;
 import dominio.Categoria;
 import dominio.Producto;
-import java.awt.Color;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 
@@ -474,11 +473,11 @@ public class V_MenuAdmin extends javax.swing.JFrame implements IV_MenuAdmin{
     }//GEN-LAST:event_bdelete1ActionPerformed
 
     private void bcerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcerrarActionPerformed
-        p.cerrar();
+        p.cerrarVista();
     }//GEN-LAST:event_bcerrarActionPerformed
 
     private void bpedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bpedidoActionPerformed
-        p.pedidos();
+        p.cambiarVistapedidos();
     }//GEN-LAST:event_bpedidoActionPerformed
 
 

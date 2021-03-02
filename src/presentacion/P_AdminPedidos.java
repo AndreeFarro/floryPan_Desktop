@@ -15,7 +15,7 @@ public class P_AdminPedidos {
         this.personal = personal;
     }
 
-    public void cerrar() {
+    public void CerrarVentana() {
         IV_Login vistaL = new V_Login();
         P_Login presentador = new P_Login(vistaL);
         vistaL.setPresentador(presentador);
@@ -28,7 +28,7 @@ public class P_AdminPedidos {
         vista.setPedidos(pedidos);       
     }
     
-    public void inicio(){
+    public void CambiarVistaAdmin(){
         IV_MenuAdmin vistaP = new V_MenuAdmin();
         P_MenuAdmin pres = new P_MenuAdmin(vistaP, personal);
         vistaP.setPresentador(pres);
@@ -51,11 +51,9 @@ public class P_AdminPedidos {
     
     public void listarPedidosPendientes(){
         ArrayList<Pedido> pedidos = new ArrayList();
-        for (Pedido p: logicP.listado()) {
-            if (p.getEstado().equals("PENDIENTE")) {
-                pedidos.add(p);
-            }
-        }
+        logicP.listado().stream().filter((p) -> (p.getEstado().equals("PENDIENTE"))).forEachOrdered((p) -> {
+            pedidos.add(p);
+        });
         vista.setPedidos(pedidos);       
     }
     

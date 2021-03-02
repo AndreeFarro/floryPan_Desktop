@@ -45,8 +45,6 @@ public class P_Pedido{
     public void iniciarDatos(){
         cliente.setPedidos(logicP.buscar(cliente));
         Pedido pedido = cliente.buscarPedido(String.valueOf(vista.getIdPedido()));
-
-        //System.out.println("-->"+pedido.getItems().get(0).getId());
        
         vista.setCorreo(cliente.getCorreo());
         vista.setDNI(String.valueOf(cliente.getDNI()));

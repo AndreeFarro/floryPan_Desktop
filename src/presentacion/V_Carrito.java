@@ -142,11 +142,6 @@ public class V_Carrito extends javax.swing.JFrame implements IV_Carrito{
         listaItems.setSelectionForeground(new java.awt.Color(255, 255, 255));
         listaItems.setShowHorizontalLines(false);
         listaItems.setShowVerticalLines(false);
-        listaItems.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                listaItemsMouseClicked(evt);
-            }
-        });
         jScrollPane2.setViewportView(listaItems);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -392,24 +387,19 @@ public class V_Carrito extends javax.swing.JFrame implements IV_Carrito{
     }// </editor-fold>//GEN-END:initComponents
 
     private void bsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bsalirActionPerformed
-        p.salir();
+        p.CerrarVentana();
     }//GEN-LAST:event_bsalirActionPerformed
 
     private void bpedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bpedidoActionPerformed
-        p.Pedidos();
+        p.cambiarVistaPedidos();
     }//GEN-LAST:event_bpedidoActionPerformed
 
     private void bcarritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcarritoActionPerformed
-        
     }//GEN-LAST:event_bcarritoActionPerformed
 
     private void bInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bInicioActionPerformed
-        p.inicio();
+        p.cambiarVistainicio();
     }//GEN-LAST:event_bInicioActionPerformed
-
-    private void listaItemsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaItemsMouseClicked
-       
-    }//GEN-LAST:event_listaItemsMouseClicked
 
     private void bEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEliminarActionPerformed
         p.eliminarItem();

@@ -23,7 +23,6 @@ public class V_AdminPedidos extends javax.swing.JFrame implements IV_AdminPedido
         listaPedidos = new javax.swing.JTable();
         bAprobar = new javax.swing.JButton();
         bPendientes = new javax.swing.JButton();
-        bAprobados = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         listaItems = new javax.swing.JTable();
 
@@ -138,20 +137,6 @@ public class V_AdminPedidos extends javax.swing.JFrame implements IV_AdminPedido
             }
         });
 
-        bAprobados.setBackground(new java.awt.Color(0, 204, 102));
-        bAprobados.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
-        bAprobados.setForeground(new java.awt.Color(255, 255, 255));
-        bAprobados.setText("Pedidos Aprobados");
-        bAprobados.setBorder(null);
-        bAprobados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bAprobados.setFocusPainted(false);
-        bAprobados.setFocusable(false);
-        bAprobados.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bAprobadosActionPerformed(evt);
-            }
-        });
-
         listaItems.setBackground(new java.awt.Color(255, 255, 255));
         listaItems.setForeground(new java.awt.Color(51, 51, 51));
         listaItems.setModel(new javax.swing.table.DefaultTableModel(
@@ -195,8 +180,6 @@ public class V_AdminPedidos extends javax.swing.JFrame implements IV_AdminPedido
                         .addComponent(bAprobar, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(bPendientes, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bAprobados, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -228,8 +211,7 @@ public class V_AdminPedidos extends javax.swing.JFrame implements IV_AdminPedido
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(bAprobar, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bPendientes, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bAprobados, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(bPendientes, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -251,16 +233,12 @@ public class V_AdminPedidos extends javax.swing.JFrame implements IV_AdminPedido
     }// </editor-fold>//GEN-END:initComponents
 
     private void bcerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcerrarActionPerformed
-        p.cerrar();
+        p.CerrarVentana();
     }//GEN-LAST:event_bcerrarActionPerformed
 
     private void bAprobarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAprobarActionPerformed
         p.aprobarPedido();
     }//GEN-LAST:event_bAprobarActionPerformed
-
-    private void bAprobadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAprobadosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bAprobadosActionPerformed
 
     private void bPendientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPendientesActionPerformed
         p.listarPedidosPendientes();
@@ -271,12 +249,11 @@ public class V_AdminPedidos extends javax.swing.JFrame implements IV_AdminPedido
     }//GEN-LAST:event_listaPedidosMouseClicked
 
     private void binicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_binicioActionPerformed
-        p.inicio();
+        p.CambiarVistaAdmin();
     }//GEN-LAST:event_binicioActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel aTitulo;
-    private javax.swing.JButton bAprobados;
     private javax.swing.JButton bAprobar;
     private javax.swing.JButton bPendientes;
     private javax.swing.JButton bcerrar;

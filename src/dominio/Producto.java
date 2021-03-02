@@ -6,10 +6,8 @@ public class Producto {
     private double precio;
     private int stock;
     private String Descripcion;
-    //private ArrayList<ItemPedido> items = new ArrayList();
 
     public Producto(){}
-
     public Producto(String id, String nombre, double precio, int stock, String Descripcion) {
         this.id = id;
         this.nombre = nombre;
@@ -56,9 +54,7 @@ public class Producto {
 
     public void setDescripcion(String Descripcion) {
         this.Descripcion = Descripcion;
-    }
-
-    
+    }   
     
     
 }

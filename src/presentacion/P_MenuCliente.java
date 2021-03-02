@@ -15,12 +15,12 @@ import java.util.StringTokenizer;
 import javax.swing.JOptionPane;
 
 public class P_MenuCliente {
-    private IV_MenuCliente vista;
+    private final IV_MenuCliente vista;
     private Cliente cliente;
-    private LN_Categoria logicC = new LN_Categoria();
-    private LN_Producto logicP = new LN_Producto();
-    private LN_Item logicI = new LN_Item();
-    private LN_Carrito logicCarrito = new LN_Carrito();
+    private final LN_Categoria logicC = new LN_Categoria();
+    private final LN_Producto logicP = new LN_Producto();
+    private final LN_Item logicI = new LN_Item();
+    private final LN_Carrito logicCarrito = new LN_Carrito();
 
     public P_MenuCliente(IV_MenuCliente vista, Cliente cliente) {
         this.vista = vista;
@@ -82,9 +82,9 @@ public class P_MenuCliente {
     }
     public void llenarCategorias(){
         List<String> filas = new ArrayList<String>();
-        for(Categoria c: logicC.listado()){
+        logicC.listado().forEach((c) -> {
             filas.add("    "+c.getId()+" - "+c.getNombre());
-        }
+        });
         vista.setCategorias(filas);
     }
     
@@ -123,8 +123,7 @@ public class P_MenuCliente {
     }
     public void agregarCarrito(){
         ItemsPedido item = new ItemsPedido();
-        Producto producto = logicP.buscar(vista.getIdProducto());
-        
+        Producto producto = logicP.buscar(vista.getIdProducto());        
         if (producto.getStock()>=vista.getCantidadProducto()) {
             item.setCantidad(vista.getCantidadProducto());
             item.setProducto(logicP.buscar(vista.getIdProducto()));
